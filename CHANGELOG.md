@@ -1,3 +1,5 @@
-## 1.0.0
+# Change Log for m4d_template
+Material Design 4 Dart - Template-based components
 
-- Initial version, created by Stagehand
+
+This CHANGELOG.md was generated with [**Changelog for Dart**](https://pub.dartlang.org/packages/changelog)
