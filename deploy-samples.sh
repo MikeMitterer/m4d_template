@@ -89,7 +89,7 @@ OPTION2=${3:-}
 
 case "${CMDLINE}" in
     -l|list|-list|--list)
-        if [ -n "${OPTION1+set}" -a "${OPTION1}" != ""  ]; then
+        if [[ -n "${OPTION1+set}" && "${OPTION1}" != "" ]]; then
             listSamples "${EXAMPLE_FOLDER}/${OPTION1}"
         else
             listSamples "${EXAMPLES[@]}"
@@ -110,7 +110,7 @@ case "${CMDLINE}" in
     ;;
 
     -x|prepare|-prepare|--prepare)
-        if [ -n "${OPTION1+set}" -a "${OPTION1}" != ""  ]; then
+        if [[ -n "${OPTION1+set}" && "${OPTION1}" != "" ]]; then
             prepareSamples "${EXAMPLE_FOLDER}/${OPTION1}"
         else
             prepareSamples "${EXAMPLES[@]}"
@@ -118,7 +118,7 @@ case "${CMDLINE}" in
     ;;
 
     -u|update|-update|--update)
-        if [ -n "${OPTION1+set}" -a "${OPTION1}" != ""  ]; then
+        if [[ -n "${OPTION1+set}" && "${OPTION1}" != "" ]]; then
             updateSamples "${EXAMPLE_FOLDER}/${OPTION1}"
         else
             updateSamples "${EXAMPLES[@]}"
@@ -126,7 +126,7 @@ case "${CMDLINE}" in
     ;;
 
     -d|deploy|-deploy|--deploy)
-        if [ -n "${OPTION1+set}" -a "${OPTION1}" != "--release"  ]; then
+        if [[ -n "${OPTION1+set}" && "${OPTION1}" != "--release" && "${OPTION1}" != "--dev" && "${OPTION1}" != "" ]]; then
             deploySamples "${EXAMPLE_FOLDER}/${OPTION1}"
         else
             deploySamples "${EXAMPLES[@]}"
@@ -134,7 +134,7 @@ case "${CMDLINE}" in
     ;;
 
     -p|publish|-publish|--publish)
-        if [ -n "${OPTION1+set}" -a "${OPTION1}" != "--force"  ]; then
+        if [[ -n "${OPTION1+set}" && "${OPTION1}" != "--force" ]]; then
             publishSamples "${EXAMPLE_FOLDER}/${OPTION1}"
         else
             publishSamples "${EXAMPLES[@]}"
@@ -143,7 +143,7 @@ case "${CMDLINE}" in
 
 
     -g|generate|-generate|--generate)
-        if [ -n "${OPTION1+set}" -a "${OPTION1}" != "--force"  -a "${OPTION1}" != "" ]; then
+        if [[ -n "${OPTION1+set}" && "${OPTION1}" != "--force" && "${OPTION1}" != "" ]]; then
             generateRsyncSetting "${EXAMPLE_FOLDER}/${OPTION1}"
         else
             generateRsyncSetting "${EXAMPLES[@]}"

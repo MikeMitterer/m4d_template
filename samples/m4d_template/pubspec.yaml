@@ -1,5 +1,5 @@
 name: m4d_template_sample
-description: Material 4 Dart 'm4d_template' Sample
+description: Material4Dart (m4d) 'm4d_template' Sample
 version: 0.1.0
 author: Mike Mitterer <office@mikemitterer.at>
 homepage: https://github.com/MikeMitterer/m4d_template
@@ -23,3 +23,4 @@ dev_dependencies:
   build_runner: any
   build_web_compilers: any
   sass_builder: any
+  
