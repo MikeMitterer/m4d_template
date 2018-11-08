@@ -1,0 +1,24 @@
+title: TODO
+samplename: todo
+sampleurl: https://github.com/MikeMitterer/dart-material-design-lite-site/tree/master/samples/spa_todo/web
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<div class="demo-preview-block">
+    <todo-input></todo-input>
+    <div class="cols">
+        <div class="col">
+            <h6 class="mdl-color-text--primary-dark">List I</h6>
+            <todo-list class="mdl-color--100"></todo-list>
+        </div>
+        <div class="col">
+            <h6 class="mdl-color-text--primary-dark">List II</h6>
+            <todo-list class="mdl-color--100"></todo-list>
+        </div>
+    </div>
+    <p>
+        The two lists are here to demonstrate the component-independence.<br>
+        There is one DataStore. Each component listens to the <strong>onChange</strong>-Action.<br>
+        (Empty records are allowed - makes testing faster!)
+    </p>
+    <p class="hint">Open the console. If you click on "Add" you'll see a log-message sent from
+    the Application-Object. It listens to changes on the "ActionBus"</p>
+</div>

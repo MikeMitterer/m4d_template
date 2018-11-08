@@ -1,0 +1,77 @@
+@import "package:m4d_components/assets/styles/material-design-lite";
+@import "app";
+
+.demo-page--todo {
+    .demo-preview-block {
+        background-color : transparent;
+    }
+
+    ul {
+        list-style-type : none;
+
+        li {
+            margin  : 0;
+            padding : 0;
+
+        }
+    }
+
+    .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start; // ⇾
+        align-content: space-between; // ||
+        align-items: center; // ↓
+
+        .mdl-checkbox {
+            width: initial;
+            flex-grow: 1;
+        }
+
+        .mdl-checkbox.is-checked .mdl-checkbox__label {
+            text-decoration : line-through;
+        }
+    }
+
+    .cols {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start; // ⇾
+        align-content: space-between; // ||
+        align-items: flex-start; // ↓
+
+        width: 100%;
+        margin-bottom: 24px;
+
+        .col {
+            width: calc(50% - 6px);
+
+            &:first-child {
+                margin-right: 12px;
+            }
+
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            justify-content: flex-start; // ↓
+            align-content: space-between; // =
+            align-items: stretch; // ⇾
+
+            box-sizing: border-box;
+
+            todo-list {
+                box-sizing: border-box;
+                border-radius: 3px;
+
+                padding: 8px;
+            }
+        }
+    }
+
+    .hint {
+        font-size: 80%;
+    }
+
+}
