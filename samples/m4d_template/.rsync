@@ -1,14 +1,15 @@
 # Rsync-Destination für dieses sample
 #
 #   - ssh ls2
-#   - cat ~/website/config/nginx/_template.conf.txt | sed -e 's/%example%/spa_todo/' > ~/website/config/nginx/spa_todo.conf
-#   - cat ~/website/config/nginx/spa_todo.conf
-#   - sudo mkdir -p ~/website/data/example/spa_todo
-#   - sudo chown ubuntu:ubuntu ~/website/data/example/spa_todo
-#   - sudo chmod 775 ~/website/data/example/spa_todo
-#   - ls -lad ~/website/data/example/spa_todo
+#   - cat ~/website/config/nginx/_template.conf.txt | sed -e 's/%example%/m4d_template/' > ~/website/config/nginx/m4d_template.conf
+#   - cat ~/website/config/nginx/m4d_template.conf
+#   - sudo mkdir -p ~/website/data/example/m4d_template
+#   - sudo chown ubuntu:ubuntu ~/website/data/example/m4d_template
+#   - sudo chmod 775 ~/website/data/example/m4d_template
+#   - echo 'm4d_template' > ~/website/data/example/m4d_template/index.html
+#   - ls -lad ~/website/data/example/m4d_template
 #   - cd ~/website && docker-compose restart
 #
-RSYNC_DESTINATION=":~/website/data/example/spa_todo/"
-EXAMPLE_URL="http://spa_todo.example.mikemitterer.at/"
+RSYNC_DESTINATION=":~/website/data/example/m4d_template/"
+EXAMPLE_URL="http://m4d_template.example.mikemitterer.at/"
 
