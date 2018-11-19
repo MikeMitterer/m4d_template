@@ -42,5 +42,13 @@ abstract class TemplateComponent {
      */
     //final Map<String,LambdaFunction> lambdas = new Map<String,LambdaFunction>();
 
-    Map<String,Function> get events;
+    /// Provide here all the events your component can handle
+    /// 
+    ///     @override
+    ///     Map<String,Function> get events {
+    ///         return <String,Function>{
+    ///             "onAdd" : onAdd
+    ///         };
+    ///     }
+    Map<String,Function> get events => <String,Function>{ };
 }
