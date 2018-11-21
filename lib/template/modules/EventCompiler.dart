@@ -97,23 +97,6 @@ class EventCompiler {
      * compileElement connects these definitions
      */
     Future compileElement(final dom.Element element, Map<String,Function> events()) async {
-
-//        _logger.warning("OBJ ${scope.runtimeType}");
-////        final map = scope as Map<String,String>;
-////        map.forEach((final String key, final String value) {
-////            _logger.warning("Map k:$key, v$value");
-////        });
-//
-//        InstanceMirror myClassInstanceMirror;
-//        dynamic reflectionError;
-//
-//        try {
-//            myClassInstanceMirror = inject.reflect(scope);
-//        } catch(error, stacktrace) {
-//            reflectionError = error;
-//            _logger.shout(error, stacktrace);
-//        }
-
         final eventCallbacks = events();
 
         datasets.keys.forEach((final String dataset) {
@@ -155,21 +138,7 @@ class EventCompiler {
                 }
 
                 // InstanceMirror instanceMirror = inject.reflect(scope);
-                _logger.info("FunctionName: ${getFunctionNameAsString()}");
-
-                // Check if we have a key/value pair
-                // This is the case if we get something vom MaterialRepeater
-                // e.g:
-                //      final MaterialRepeat repeater = MaterialRepeat.widget(dom.querySelector("#main"));
-                //      await repeater.add(
-                //          new Pair("nfrs", new NameForRepeatSample("A - Nicki",removeCallback))
-                //      );
-//                if((instanceMirror.type.instanceMembers["key"]?.isGetter ?? false)
-//                    && (instanceMirror.type.instanceMembers["value"]?.isGetter ?? false)) {
-//
-//                    final value = instanceMirror.invokeGetter("value");
-//                    instanceMirror = inject.reflect(value);
-//                }
+                _logger.fine("FunctionName: ${getFunctionNameAsString()}");
 
                 // If, e.g. dataset is 'mdl-click', it calls _onClick(element,() { ... });
                 datasets[dataset](element,(final dom.Event event) {
