@@ -22,11 +22,11 @@ dependencies:
   m4d_flux: '>=0.1.0 <1.0.0'
   # path: /Volumes/Daten/DevLocal/DevDart/m4d/m4d_flux
 
-  m4d_form: # '>=0.1.0 <1.0.0'
-   path: /Volumes/Daten/DevLocal/DevDart/m4d/m4d_form
+  m4d_form: '>=0.1.0 <1.0.0'
+  # path: /Volumes/Daten/DevLocal/DevDart/m4d/m4d_form
 
-  m4d_directive: # '>=0.1.0 <1.0.0'
-    path: /Volumes/Daten/DevLocal/DevDart/m4d/m4d_directive
+  m4d_directive: '>=0.1.0 <1.0.0'
+  # path: /Volumes/Daten/DevLocal/DevDart/m4d/m4d_directive
 
 dev_dependencies:
   build_runner: any

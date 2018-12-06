@@ -26,39 +26,16 @@ import 'package:console_log_handler/console_log_handler.dart';
 import 'package:validate/validate.dart';
 
 import 'package:m4d_core/m4d_ioc.dart' as ioc;
-import 'package:m4d_inplace_sample/services.dart' as inplaceServices;
 
 import 'package:m4d_flux/m4d_flux.dart';
 import 'package:m4d_directive/m4d_directive.dart';
 import 'package:m4d_directive/services.dart' as directiveServices;
-
-import 'package:m4d_directive/directive/components/interfaces/stores.dart';
+import 'package:m4d_template/m4d_template.dart';
 
 import "package:m4d_inplace_sample/components/interfaces/actions.dart";
 import "package:m4d_inplace_sample/components/interfaces/stores.dart";
+import 'package:m4d_inplace_sample/services.dart' as inplaceServices;
 import "package:m4d_inplace_sample/m4d_inplace_sample.dart" show Person;
-
-class PersonForList extends Person implements SimpleDataObject {
-
-  PersonForList(final String firstname,final String lastname, final int age, final String bio)
-      : super(firstname, lastname, age, bio);
-
-  @override
-  String asString(final String name) {
-    if(name == "id") {
-        return id;
-    }
-    throw "asString ist not implemented for ${name}!";
-  }
-
-  @override
-  bool contains(final String name) {
-      if(name == "id") {
-          return true;
-      }
-      throw "contains ist not implemented for ${name}!";
-  }
-}
 
 /// Concrete implementation for our stores.
 ///
@@ -151,5 +128,35 @@ class InplaceStoreModule extends ioc.IOCModule {
     configure() {
         ioc.IOCContainer().bind(inplaceServices.PersonsStore).to(_store);
         ioc.IOCContainer().bind(directiveServices.SimpleValueStore).to(_store);
+    }
+}
+
+/// m4d-list component asks for "id" and for this give it to the component this way
+///
+///     <m4d-list model="persons">
+///         <template>
+///             <sample-inplace-edit class="sample-inplace-edit--shadow" data-id="{{id}}"></sample-inplace-edit>
+///         </template>
+///     </m4d-list>
+///
+class PersonForList extends Person implements SimpleDataObject {
+
+    PersonForList(final String firstname,final String lastname, final int age, final String bio)
+        : super(firstname, lastname, age, bio);
+
+    @override
+    String asString(final String name) {
+        if(name == "id") {
+            return id;
+        }
+        throw "asString ist not implemented for ${name}!";
+    }
+
+    @override
+    bool contains(final String name) {
+        if(name == "id") {
+            return true;
+        }
+        throw "contains ist not implemented for ${name}!";
     }
 }

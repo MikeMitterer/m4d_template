@@ -52,3 +52,9 @@ abstract class TemplateComponent {
     ///     }
     Map<String,Function> get events => <String,Function>{ };
 }
+
+/// Needed for M4DListComponent
+abstract class SimpleDataObject {
+    bool contains(final String name);
+    String asString(final String name);
+}
