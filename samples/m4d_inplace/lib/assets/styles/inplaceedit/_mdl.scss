@@ -1,0 +1,12 @@
+// MDL! (via SASS_PATH)
+// SASS_PATH is automatically set by sitegen
+//      Checkout the settings in .sitegen/site.yaml
+
+//noinspection CssUnknownTarget
+@import "package:m4d_components/assets/styles/theme/theme";
+
+//noinspection CssUnknownTarget
+@import "package:m4d_components/assets/styles/shadow/mixins";
+
+//noinspection CssUnknownTarget
+@import "package:m4d_components/assets/styles/typography/mixins";

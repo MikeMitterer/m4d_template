@@ -8,14 +8,22 @@ environment:
   sdk: ">=2.0.0 <3.0.0"
 
 dependencies:
+  uuid: any
+  
   m4d_template:
     path: ../..
+
+  m4d_animation: '>=0.1.0 <1.0.0'
+  # path: /Volumes/Daten/DevLocal/DevDart/m4d/m4d_animation
 
   m4d_components: '>=0.1.0 <1.0.0'
   # path: /Volumes/Daten/DevLocal/DevDart/m4d/m4d_components
 
   m4d_flux: '>=0.1.0 <1.0.0'
   # path: /Volumes/Daten/DevLocal/DevDart/m4d/m4d_flux
+
+  m4d_form: '>=0.1.0 <1.0.0'
+  # path: /Volumes/Daten/DevLocal/DevDart/m4d/m4d_form
 
   m4d_directive: '>=0.1.0 <1.0.0'
 

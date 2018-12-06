@@ -33,8 +33,13 @@ import 'package:validate/validate.dart';
 
 import 'package:m4d_core/m4d_core.dart';
 import "package:m4d_core/m4d_ioc.dart" as ioc;
+import 'package:m4d_directive/directive/components/interfaces/actions.dart';
+import 'package:m4d_directive/directive/components/interfaces/stores.dart';
+import 'package:m4d_directive/services.dart' as directiveService;
+import 'package:m4d_flux/m4d_flux.dart';
 
-part "template/MdlTemplateComponent.dart";
+part "template/components/M4DListComponent.dart";
+part "template/components/MdlTemplateComponent.dart";
 
 part "template/interfaces.dart";
 
@@ -59,3 +64,15 @@ part "template/modules/TemplateRenderer.dart";
 //
 //    //componentHandler().addModule(_templateModule);
 //}
+
+void registerM4DTemplateComponents() {
+    registerM4DListComponent();
+}
+
+class TemplateModule extends ioc.IOCModule {
+
+    @override
+    configure() {
+        registerM4DTemplateComponents();
+    }
+}

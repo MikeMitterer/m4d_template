@@ -1,0 +1,20 @@
+//noinspection CssUnknownTarget
+@import "package:m4d_components/assets/styles/material-design-lite";
+
+//noinspection CssUnknownTarget
+@import "package:m4d_inplace_sample/assets/styles/inplaceedit/component";
+
+@import "_app";
+
+$_inplace_edit_background: #f2f2f2 !important;
+
+.demo-page--inplace, .demo-section--inplace {
+
+    // Default color for background set to content-box to make the demo
+    // look more realistic
+    .mdl-layout__content > .container > .content {
+        background-color: $_inplace_edit_background;
+    }
+}
+
+

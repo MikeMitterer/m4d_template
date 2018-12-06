@@ -1,0 +1,17 @@
+title: INPLACE
+samplename: inplace
+sampleurl: https://github.com/MikeMitterer/dart-material-design-lite-site/tree/master/samples/spa_inplace/web
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+<div class="demo-preview-block">
+    <!--
+        sample-inplace-persons implements "ScopeAware" so we can take
+        'persons' from this component and not from Application
+                                                                             -->
+    <sample-inplace-persons>
+        <m4d-list model="persons">
+            <template>
+                <sample-inplace-edit class="sample-inplace-edit--shadow" data-id="{{id}}"></sample-inplace-edit>
+            </template>
+        </m4d-list>
+    </sample-inplace-persons>
+</div>
