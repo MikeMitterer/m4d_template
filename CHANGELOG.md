@@ -1,6 +1,14 @@
 # Change Log for m4d_template
 Material Design 4 Dart - Template-based components
 
+## [Unreleased](http://github.com/mikemitterer/m4d_template/compare/v0.2...HEAD)
+
+### Bugs
+* Wrong link in inplace-edit-example to GH repo [a321fcb](https://github.com/mikemitterer/m4d_template/commit/a321fcb8e04068367496ff0f7de5c50739c03c5d)
+
+### Docs
+* Link to samples added in README [6cd2377](https://github.com/mikemitterer/m4d_template/commit/6cd23773b85b45b1a3b380d232283fe630982c60)
+
 ## [v0.2](http://github.com/mikemitterer/m4d_template/compare/v0.1...v0.2) - 2018-12-06
 
 ### Feature
