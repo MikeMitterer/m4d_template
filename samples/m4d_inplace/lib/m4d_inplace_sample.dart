@@ -65,7 +65,7 @@ void registerInplaceSampleComponents() {
     registerNameEditComponent();
 }
 
-class InplaceExampleModule extends ioc.IOCModule {
+class InplaceExampleModule extends ioc.Module {
 
   @override
   configure() {
@@ -73,7 +73,7 @@ class InplaceExampleModule extends ioc.IOCModule {
   }
 
   @override
-  List<ioc.IOCModule> get dependsOn => [
+  List<ioc.Module> get dependsOn => [
       CoreComponentsModule(), TemplateModule(), FormModule()
   ];
 

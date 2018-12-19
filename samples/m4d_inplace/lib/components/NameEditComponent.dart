@@ -34,7 +34,7 @@ class NameEditComponent extends MdlTemplateComponent {
     /// Only a single person is necessary
     final PersonsStore _store;
 
-    NameEditComponent.fromElement(final dom.HtmlElement element,final ioc.IOCContainer iocContainer)
+    NameEditComponent.fromElement(final dom.HtmlElement element,final ioc.Container iocContainer)
         : _store = iocContainer.resolve(inplaceServices.PersonsStore).as<PersonsStore>(),
             super(element,iocContainer) {
         
@@ -294,7 +294,7 @@ class NameEditComponent extends MdlTemplateComponent {
 void registerNameEditComponent() {
     final MdlConfig config = new MdlWidgetConfig<NameEditComponent>(
         _NameEditComponentConstant.WIDGET_SELECTOR,
-            (final dom.HtmlElement element, final ioc.IOCContainer iocContainer)
+            (final dom.HtmlElement element, final ioc.Container iocContainer)
                 => new NameEditComponent.fromElement(element,iocContainer)
     );
     

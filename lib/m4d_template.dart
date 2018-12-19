@@ -69,7 +69,7 @@ void registerM4DTemplateComponents() {
     registerM4DListComponent();
 }
 
-class TemplateModule extends ioc.IOCModule {
+class TemplateModule extends ioc.Module {
 
     @override
     configure() {

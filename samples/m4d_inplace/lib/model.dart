@@ -22,7 +22,6 @@ library m4d_inplace_sample.model;
 import 'package:uuid/uuid.dart';
 import 'package:validate/validate.dart';
 
-import 'package:m4d_animation/m4d_animation.dart';
 
 part 'model/Person.dart';
 

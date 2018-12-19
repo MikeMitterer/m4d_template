@@ -15,7 +15,7 @@ class M4DListComponent extends MdlTemplateComponent {
 
     Duration renderIntervall = Duration(milliseconds: 200);
 
-    M4DListComponent.fromElement(final dom.HtmlElement element,final ioc.IOCContainer iocContainer)
+    M4DListComponent.fromElement(final dom.HtmlElement element,final ioc.Container iocContainer)
         : _store = iocContainer.resolve(directiveService.SimpleValueStore).as<SimpleValueStore>(),
             super(element,iocContainer) {
         _init();
@@ -114,7 +114,7 @@ class M4DListComponent extends MdlTemplateComponent {
 void registerM4DListComponent() {
     final MdlConfig config = new MdlWidgetConfig<M4DListComponent>(
         _M4DListComponentCssClasses.MAIN_CLASS,
-            (final dom.HtmlElement element, final ioc.IOCContainer iocContainer)
+            (final dom.HtmlElement element, final ioc.Container iocContainer)
         => new M4DListComponent.fromElement(element, iocContainer));
 
     config.selectorType = SelectorType.TAG;

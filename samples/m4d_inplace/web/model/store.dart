@@ -121,13 +121,13 @@ class PersonsStoreImpl extends Dispatcher with SimpleDataStoreMixin implements P
     }
 }
 
-class InplaceStoreModule extends ioc.IOCModule {
+class InplaceStoreModule extends ioc.Module {
     final _store = PersonsStoreImpl();
 
     @override
     configure() {
-        ioc.IOCContainer().bind(inplaceServices.PersonsStore).to(_store);
-        ioc.IOCContainer().bind(directiveServices.SimpleValueStore).to(_store);
+        ioc.Container().bind(inplaceServices.PersonsStore).to(_store);
+        ioc.Container().bind(directiveServices.SimpleValueStore).to(_store);
     }
 }
 
