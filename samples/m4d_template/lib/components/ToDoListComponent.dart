@@ -43,7 +43,7 @@ class ToDoListComponent extends MdlTemplateComponent {
 
     final ToDoListStoreInterface _datastore;
 
-    ToDoListComponent.fromElement(final dom.HtmlElement element,final ioc.IOCContainer iocContainer)
+    ToDoListComponent.fromElement(final dom.HtmlElement element,final ioc.Container iocContainer)
         : _datastore = iocContainer.resolve(ToDoListStore).as<ToDoListStoreInterface>(),
             super(element,iocContainer) {
 
@@ -163,7 +163,7 @@ class ToDoListComponent extends MdlTemplateComponent {
 void registerToDoListComponent() {
     final MdlConfig config = new MdlWidgetConfig<ToDoListComponent>(
         _ToDoListComponentCssClasses.MAIN_CLASS,
-            (final dom.HtmlElement element, final ioc.IOCContainer iocContainer)
+            (final dom.HtmlElement element, final ioc.Container iocContainer)
                 => new ToDoListComponent.fromElement(element, iocContainer));
 
     config.selectorType = SelectorType.TAG;

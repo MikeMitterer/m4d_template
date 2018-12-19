@@ -37,7 +37,7 @@ Future main() async {
 
     configLogging();
 
-    ioc.IOCContainer.bindModules([
+    ioc.Container.bindModules([
         ToDoExampleModule()
     ]).bind(coreService.Application).to(Application());
 

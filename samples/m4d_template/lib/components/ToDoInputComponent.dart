@@ -30,7 +30,7 @@ class ToDoInputComponent extends MdlTemplateComponent {
 
     final ToDoInputStoreInterface _datastore;
 
-    ToDoInputComponent.fromElement(final dom.HtmlElement element,final ioc.IOCContainer iocContainer)
+    ToDoInputComponent.fromElement(final dom.HtmlElement element,final ioc.Container iocContainer)
         : _datastore = iocContainer.resolve(ToDoInputStore).as<ToDoInputStoreInterface>(),
             super(element,iocContainer) {
         
@@ -120,7 +120,7 @@ class ToDoInputComponent extends MdlTemplateComponent {
 void registerToDoInputComponent() {
     final MdlConfig config = new MdlWidgetConfig<ToDoInputComponent>(
         _ToDoInputComponentConstant.WIDGET_SELECTOR,
-            (final dom.HtmlElement element,final ioc.IOCContainer iocContainer)
+            (final dom.HtmlElement element,final ioc.Container iocContainer)
                 => new ToDoInputComponent.fromElement(element,iocContainer)
     );
     

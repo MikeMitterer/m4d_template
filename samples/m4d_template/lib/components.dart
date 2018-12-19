@@ -44,7 +44,7 @@ void registerToDoComponents() {
     registerToDoInputComponent();
 }
 
-class ToDoExampleModule extends ioc.IOCModule {
+class ToDoExampleModule extends ioc.Module {
     // One instance for SimpleDataStore and for SimpleValueStoree
     final _store = ToDoDataStore();
 
@@ -52,17 +52,17 @@ class ToDoExampleModule extends ioc.IOCModule {
     configure() {
         registerToDoComponents();
 
-        ioc.IOCContainer().bind(ToDoInputStore).to(_store);
-        ioc.IOCContainer().bind(ToDoListStore).to(_store);
+        ioc.Container().bind(ToDoInputStore).to(_store);
+        ioc.Container().bind(ToDoListStore).to(_store);
 
         // Stores for mdl_model, mdl_attribute, mdl_class
-        ioc.IOCContainer().bind(directiveService.SimpleDataStore).to(_store);
-        ioc.IOCContainer().bind(directiveService.SimpleValueStore).to(_store);
+        ioc.Container().bind(directiveService.SimpleDataStore).to(_store);
+        ioc.Container().bind(directiveService.SimpleValueStore).to(_store);
 
     }
 
     @override
-    List<ioc.IOCModule> get dependsOn => [
+    List<ioc.Module> get dependsOn => [
         CoreComponentsModule(),
         DirectivesModule()
     ];
