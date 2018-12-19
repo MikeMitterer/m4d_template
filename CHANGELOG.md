@@ -9,6 +9,9 @@ Material Design 4 Dart - Template-based components
 ### Docs
 * Link to samples added in README [6cd2377](https://github.com/mikemitterer/m4d_template/commit/6cd23773b85b45b1a3b380d232283fe630982c60)
 
+### Refactor
+* Renamed IOCContainer in m4d_core to Container [6e552f3](https://github.com/mikemitterer/m4d_template/commit/6e552f37d7e30d9b58cc6611e010fa02f1312e50)
+
 ## [v0.2](http://github.com/mikemitterer/m4d_template/compare/v0.1...v0.2) - 2018-12-06
 
 ### Feature
