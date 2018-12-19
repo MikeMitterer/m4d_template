@@ -13,7 +13,7 @@ dependencies:
   m4d_template:
     path: ../..
 
-  m4d_core: '>=0.1.0 <1.0.0'
+  m4d_core: '>=0.2.0 <1.0.0'
   # path: /Volumes/Daten/DevLocal/DevDart/m4d/m4d_core
 
   m4d_animation: '>=0.1.0 <1.0.0'
