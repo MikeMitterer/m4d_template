@@ -29,7 +29,6 @@ import 'package:m4d_directive/directive/components/interfaces/stores.dart';
 import 'package:m4d_flux/m4d_flux.dart';
 
 import 'package:m4d_template_sample/components/interfaces/stores.dart';
-import 'package:m4d_directive/directive/components/interfaces/stores.dart';
 
 class ToDoDataStore extends Dispatcher
     implements ToDoInputStoreInterface, ToDoListStoreInterface, SimpleValueStore {

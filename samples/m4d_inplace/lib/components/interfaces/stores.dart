@@ -19,7 +19,6 @@
 
 library m4d_inplace_sample.components.interfaces.stores;
 
-import 'package:m4d_core/m4d_core.dart';
 import 'package:m4d_flux/m4d_flux.dart';
 
 import 'package:m4d_inplace_sample/model.dart';

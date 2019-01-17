@@ -120,7 +120,7 @@ class EventCompiler {
                 final Match match = new RegExp(r"([^(]*)\(([^)]*)\)").firstMatch(element.dataset[dataset]);
 
                 // from the above sample this would be: check
-                Symbol getFunctionName() => new Symbol(match.group(1));
+                // Symbol getFunctionName() => new Symbol(match.group(1));
 
                 String getFunctionNameAsString() => match.group(1).split(".").last;
 

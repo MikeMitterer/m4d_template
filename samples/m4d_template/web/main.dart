@@ -41,7 +41,7 @@ Future main() async {
         ToDoExampleModule()
     ]).bind(coreService.Application).to(Application());
 
-    final Application app = await componentHandler().run();
+    final Application app = await componentHandler().upgrade();
     app.run();
 }
 
